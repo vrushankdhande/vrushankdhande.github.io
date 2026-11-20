@@ -1,16 +1,16 @@
 # Vrushank Dhande — Portfolio Website
 
-A personal portfolio website for Vrushank Dhande, ML Engineer & Data Scientist based in Pune, India.
+A personal portfolio website for Vrushank Dhande, Artificial Intelligence Engineer based in Pune, India.
 
 ## 🌐 Live Demo
 
-> Deploy `index.html` to any static hosting service (GitHub Pages, Netlify, Vercel, etc.)
+> https://vrushankdhande.github.io/
 
 ---
 
 ## 📋 Overview
 
-A single-page portfolio built with pure HTML, CSS, and vanilla JavaScript — no frameworks, no build tools, no dependencies. Features a dark theme with a purple/teal accent palette, smooth scroll animations, and a fully responsive layout.
+A single-page portfolio built with pure HTML, CSS, and vanilla JavaScript — no frameworks and no build tools. Features a dark theme with a purple/teal accent palette, smooth scroll animations, and a fully responsive layout.
 
 ---
 
@@ -22,7 +22,9 @@ A single-page portfolio built with pure HTML, CSS, and vanilla JavaScript — no
 - **Projects** — Featured project card + grid of GitHub projects with language tags and years
 - **Writing & AI** — Links to Medium blog and a live Streamlit AI bot
 - **Contact** — Email, phone, location, and social media links
-- **Smooth animations** — Intersection Observer–based fade-in on scroll
+- **Animated AI background** — canvas neural network (drifting nodes, cursor-reactive links, travelling data pulses) over a soft aurora and grid; pauses when the tab is hidden and is static with `prefers-reduced-motion`
+- **Motion** — hero blur-in, tech marquee, 3D card tilt, magnetic buttons, cursor follower, scroll parallax, text-decode section labels, staggered tag pop-ins (all disabled for `prefers-reduced-motion`)
+- **Polish** — floating glass nav with active-section highlight and mobile menu, scroll progress bar, loader and photo skeleton, staggered scroll reveals, count-up stats, card spotlight hover, back-to-top button
 
 ---
 
@@ -32,18 +34,20 @@ A single-page portfolio built with pure HTML, CSS, and vanilla JavaScript — no
 |---|---|
 | Markup | HTML5 |
 | Styling | CSS3 (custom properties, grid, flexbox, `clamp()`) |
-| Scripting | Vanilla JavaScript (Intersection Observer API) |
-| Fonts | Google Fonts — Space Grotesk, Inter |
+| Scripting | Vanilla JavaScript (Canvas 2D, Intersection Observer API) |
+| Fonts | Google Fonts — Space Grotesk, Inter, JetBrains Mono |
 
-No npm, no bundler, no framework. Just open `index.html` in a browser.
+No npm, no bundler, no framework. Just open `index.html` in a browser. The only external dependency is Google Fonts.
 
 ---
 
 ## 📁 Project Structure
 
 ```
-portfolio/
-└── index.html    # Single self-contained file (HTML + CSS + JS)
+vrushankdhande.github.io/
+├── index.html    # HTML + CSS + JS
+├── photo.jpg     # Hero photo (720px wide, ~75 KB)
+└── README.md
 ```
 
 ---
@@ -54,8 +58,8 @@ portfolio/
 
 ```bash
 # Clone the repository
-git clone https://github.com/vrushankdhande/portfolio.git
-cd portfolio
+git clone https://github.com/vrushankdhande/vrushankdhande.github.io.git
+cd vrushankdhande.github.io
 
 # Open directly in browser
 open index.html
@@ -65,14 +69,13 @@ python3 -m http.server 8000   # then visit http://localhost:8000
 
 ### Deploy to GitHub Pages
 
-1. Push `index.html` to the root of your repository (or a `docs/` folder).
-2. Go to **Settings → Pages**.
-3. Set the source branch and folder, then save.
-4. Your site will be live at `https://vrushankdhande.github.io/<repo-name>/`.
+1. Push `index.html` and `photo.jpg` to the root of the `vrushankdhande.github.io` repository.
+2. Go to **Settings → Pages** and set the source to the `main` branch, root folder.
+3. The site is served at `https://vrushankdhande.github.io/`.
 
 ### Deploy to Netlify / Vercel
 
-Drag and drop `index.html` (or the folder) into the Netlify/Vercel dashboard — done.
+Drag and drop the folder (`index.html` + `photo.jpg`) into the Netlify/Vercel dashboard — done.
 
 ---
 
@@ -102,7 +105,7 @@ Change colors, fonts, or spacing by editing these variables at the top of the `<
 | Hero | Intro + social links |
 | About | Background, stats |
 | Skills | ML, Data, DB, Tools |
-| Projects | 10+ GitHub projects |
+| Projects | 10+ GitHub projects, incl. the Travel Reimbursement Approval Agent |
 | Writing & AI | Medium blog + AI bot |
 | Contact | Email, phone, socials |
 
